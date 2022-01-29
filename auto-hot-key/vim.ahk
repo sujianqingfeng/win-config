@@ -7,3 +7,10 @@
 ; left shift backspace -> delete
 <+Backspace::Send {DEL}
 
+; right alt esc -> `
+>!Esc::Send,``
+; right ctr esc -> ~
+>^Esc::Send,~
+
+;cap lock -> ctr
+CapsLock::Control
