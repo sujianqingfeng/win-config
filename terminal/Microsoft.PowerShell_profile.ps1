@@ -12,6 +12,11 @@ function ds{
   nr serve
 }
 
-function b{
+function db{
   nr build
 }
+
+function ns{
+  nr start
+}
+
