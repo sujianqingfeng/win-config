@@ -1,32 +1,34 @@
 
 # Prompt
 # Import-Module oh-my-posh
-Import-Module posh-git
+# Import-Module posh-git
 Import-Module Terminal-Icons
-Install-Module PSReadLine
+# Install-Module PSReadLine
 
-oh-my-posh --init --shell pwsh --config ~/OneDrive/terminal-theme/zash.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config ~/OneDrive/terminal-theme/wopian.omp.json | Invoke-Expression
 
 
 #PSREadLine 
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -PredictionSource History
 
-# 删除冲突别名
-Del alias:ni -Force
+# which
+function global:which ([string]$command) {
+  if (-not($command)) { throw "ERROR: Please supply a command name" }
+  (Get-Command $command).Path
+}
+
+
 
 # Alias 
+
+# 删除冲突别名
+Del alias:ni -Force
 
 Set-Alias vim nvim
 Set-Alias g git
 
 # foront
-# Set-Alias d nr dev 
-# Set-Alias ds nr server
-# Set-Alias db nr build
-# Set-Alias ns nr start
-
-
 
 function d {
   nr dev
