@@ -42,6 +42,11 @@ function db{
   nr build
 }
 
+
+function t{
+  nr test
+}
+
 function ns{
   nr start
 }
