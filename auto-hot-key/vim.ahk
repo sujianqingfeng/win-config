@@ -33,15 +33,15 @@ CapsLock & k::Send {Up}
 ; CapsLock::Control
 
 
-; esc自动切换成英文
-#If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe nvim.exe")
-~esc::
-{
-  Send, {ESC}
-  ; SwitchIME(0x04090409) ; 英语(美国) 美式键盘
-  SwitchIME(0x08040804) ; 中文(中国) 简体中文-美式键盘
-}
-#If
+; esc自动切换成英文 感觉不好用
+; #If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe nvim.exe")
+; ~esc::
+; {
+;   Send, {ESC}
+;   ; SwitchIME(0x04090409) ; 英语(美国) 美式键盘
+;   SwitchIME(0x08040804) ; 中文(中国) 简体中文-美式键盘
+; }
+; #If
 
 
 SwitchIME(dwLayout){
