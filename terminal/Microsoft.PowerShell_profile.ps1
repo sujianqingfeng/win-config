@@ -30,16 +30,16 @@ Set-Alias vim nvim
 # git
 Set-Alias g git
 
-function gcm{
-  git commit -m
+function gcm([string]$message){
+  git commit -m $message
 }
 
 function gb{
   git branch
 }
 
-function gbd{
-  git branch -D 
+function gbd([string]$name){
+  git branch -D $name 
 }
 
 function gl{
