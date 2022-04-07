@@ -26,7 +26,41 @@ function global:which ([string]$command) {
 Del alias:ni -Force
 
 Set-Alias vim nvim
+
+# git
 Set-Alias g git
+
+function gcm{
+  git commit -m
+}
+
+function gb{
+  git branch
+}
+
+function gbd{
+  git branch -D 
+}
+
+function gl{
+  git log 
+}
+
+function ga{
+  git add
+}
+
+function gA{
+  git add -A
+}
+
+function gcam([string]$message) {
+  git add -A && git commit -m $message 
+}
+
+function master {
+  git checkout master
+}
 
 # foront
 
